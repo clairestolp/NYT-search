@@ -4,3 +4,12 @@
     background-repeat: no-repeat;
     background-position-y: 0%;
 }*/
+
+#head {
+    font-family: 'IM fell double pica', serif;
+}
+
+.results-div{
+    height: 100px;
+    margin: 20px;
+}

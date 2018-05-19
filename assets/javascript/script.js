@@ -21,20 +21,25 @@ $('#submit').on('click', function () {
     for (let i = 0; numResults; i++) {
 
         newDiv = $('<div>');
-        h1 = $('<h1>');
+        h3 = $('<h3>');
         p = $('<p>');
 
-        h1.text(response.response.docs[i].headline.main);
+        h3.text(response.response.docs[i].headline.main);
         p.text(response.response.docs[i].byline.original);
 
-        newDiv.append(h1).append(p);
-        $('#results').append(newDiv);
+        newDiv
+            .addClass('bg-light results-div')
+            .append(h3)
+            .append(p);
+       
+            $('#results')
+                .append(newDiv);
 
         console.log(response.response.docs[i].headline.main);
         console.log(response.response.docs[i].byline.original);
     }
 
-})
+});
 });
 
 
